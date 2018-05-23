@@ -1,3 +1,5 @@
+# understands it holds money
+
 class Oystercard
   attr_reader :balance
 
@@ -12,4 +14,9 @@ class Oystercard
     fail message if (@balance + amount) > DEFAULT_MAX_LIMIT
     @balance += amount
   end
+
+  def deduct(amount)
+    @balance -= amount
+  end
+
 end

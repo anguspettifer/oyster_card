@@ -21,4 +21,15 @@ describe Oystercard do
     end
 
   end
+
+  describe "#deduct" do
+
+    it "deducts fair from balance" do
+      subject.top_up(10)
+      subject.deduct(5)
+      expect(subject.balance).to eq 5
+    end
+
+  end
+
 end
